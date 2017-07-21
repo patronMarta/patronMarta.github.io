@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+}
+h1 {
+    color: #808080;
+    font-size: 2em;
+}
+.heading {
+    margin: 20px 25px;
+}
+.mainContent {
+    background-color: #191940;
+    width: 20%;
+}
+.chapter {
+    font-size: 1.2em;
+    background-color: rgb(247, 29, 65);
+    color: white;
+    margin-top: 60px;
+    padding: 20px;
+}
+.detailsContent {  
+    width: 80%;
+   /* padding: 30px;*/
+}
+.itemsContainer { 
+   /* padding: 15px 15px 15px 25px;
+    border: 1px solid gray; */
+    width: 50%;
+    min-height: 500px;
+    box-shadow: 1px 1px 3px 1px gray;
+}
+.addInput {   
+    margin: 15px 0;
+    padding: 0 15px 0 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    
+}
+.nameInput {
+    width: calc(100% - 130px);
+    width: -webkit-calc(100% - 130px);
+    width: -o-calc(100% - 130px);
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 3px;
+    border: 1px solid rgb(203, 203, 203);
+}
+.buttonStyle {
+    font-size: 14px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.btnAdd {
+    background-color: rgb(32, 210, 206);
+    color: white;
+    padding: 7px 30px;
+    border: none;   
+}
+.btnDelete {
+    background-color: white;
+    color: rgb(247, 29, 65);
+    padding: 7px 25px;
+    border: 1px solid rgb(247, 29, 65);
+}
+.item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 0 15px 0 20px;
+}
+.activeItem {
+    border-left: 2px solid red;
+}
+.line {
+    width: 100%;
+    margin-top: 10px;
+    border-top: 1px solid rgb(203, 203, 203);
+}
+.itemText {
+    font-weight: bold;
+   
+}
+.forItem {
+    display: flex;   
+}
+.countComments {
+    font-size: 0.8em;
+    font-weight: normal;
+    font-style: normal;
+    padding: 3px 10px;
+    margin-left: 8px;
+    color: white;
+    background-color: rgb(32, 210, 206);
+    border-radius: 10px;
+}
+.commentsContainer {
+    
+    width: 47%;
+    padding: 15px;  
+    box-shadow: 1px 1px 3px 1px gray;
+}
+.containerDetails {
+    width: 95%;
+    margin: 30px auto;   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.itemComment,.addComment {
+    font-size: 14px;
+    display: flex;
+    margin: 20px 0;
+    align-items: flex-start;
+}
+.itemColor,.beforeComment {
+    min-width: 50px;
+    height: 50px; 
+    margin-right: 10px;   
+}
+
+.itemComment:nth-child(odd)>.itemColor {
+    background-color: #FF8400;
+}
+
+.itemComment:nth-child(even)>.itemColor {
+    background-color: #191940;
+}
+.beforeComment {
+    background-color: rgb(203, 203, 203);
+}
+.enterComment {
+    font-family: sans-serif;
+    width: 90%;
+    min-height: 70px;
+    padding: 5px;
+    resize: none;
+}
+
+
+@media(max-width: 950px) {
+    .mainContent {
+        width: 100%;
+    }
+    .detailsContent {
+        width: 100%;
+    }
+}
+@media(max-width: 780px) {
+    .itemsContainer {
+        width: 100%;
+        min-height: auto;
+        margin-bottom: 10px;
+    }
+    .commentsContainer {
+        width: 100%;
+    }
+}

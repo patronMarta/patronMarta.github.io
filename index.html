@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="script.js" defer></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+
+<body>
+  <section class="mainContent">
+    <h1 class="heading">Main</h1>
+    <p class="chapter">Overview</p>
+  </section>
+  <section class="detailsContent" ng-app="itemsApp" ng-controller="addDetails">
+    <article class="containerDetails">
+    <article class="itemsContainer">
+      <h1 class="heading">Items</h1>   
+      <div class="addInput">
+        <input type="text" placeholder="Type name here..." class="nameInput" ng-model="inputName">
+        <button class="btnAdd buttonStyle" ng-click="addItem()">Add new</button>        
+      </div>
+      <div class="item" ng-click="toActive($index)" ng-repeat="el in itemsList">
+        <div class="forItem"><p class="itemText" ng-bind="el.textItem"></p><i class="countComments" ng-bind="el.count"></i></div>
+        <button class="btnDelete buttonStyle" ng-click="deleteItem($index)">Delete</button>
+        <hr class="line">
+      </div>
+    </article>
+    <article class="commentsContainer">
+      <h1>Comments #2</h1> 
+      <div class="itemComment" ng-repeat="x in itemsComment">  
+        <div class="itemColor"></div>
+        <p ng-bind="x.comment"></p>
+      </div>  
+      <div class="addComment">
+        <div class="beforeComment"></div>
+        <textarea class="enterComment" ng-model="inputComment" ng-keypress="newComment($event)"></textarea>
+      </div>   
+    </article>
+    </article>
+  </section>  
+
+</body>
+
+</html>
