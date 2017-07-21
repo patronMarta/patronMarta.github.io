@@ -13,7 +13,7 @@ class ItemInfo {
 }
 
 
-localStorage.clear();
+//localStorage.clear();
 initWindow();         /*for add init items and comments to application.
                        After restarting page items and comments will be without changes*/
 
